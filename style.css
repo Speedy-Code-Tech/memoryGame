@@ -1,0 +1,128 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(11, 90, 86);
+
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    width: 40%;
+    height: 95%;
+    background-color: rgb(212, 212, 212);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h2{
+    width: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    padding:30px; 
+    font-size: 2.4em;
+    padding-bottom: 10px;
+}
+
+.pad{
+    padding:  20px 0px;
+}
+.square{
+    width: 90%;
+    height: 90%;
+    /* background-color: #86ADAB; */
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    /* perspective: 500px; */
+}
+button{
+    padding: 10px 50px;
+    font-weight: bold;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: yellow;
+    border: 1px solid yellow;
+}
+button:hover,button:focus{
+    background-color: rgb(224, 224, 12);
+}
+
+.item{
+    position: relative;
+    width: 90px;
+    height: 90px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.25em;
+    transform: rotateY(180deg);
+}
+.item.jester{
+    transform: rotateY(0deg);
+}
+.item::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: #10aaa2;
+    transition: 0.5s;
+    /* opacity: .5; */
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+}
+
+.jester::after{
+    transform: rotateY(180deg);
+}
+
+.match::after{
+    transform: rotateY(180deg);
+
+}
+.modalshow{
+    display: none;
+    transition: .5s;
+    
+}
+.modal{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 500px;
+    height: 300px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+}
+.modal>h1{
+    font-size: 2.5em;
+    font-family: sans-serif;
+    color: green;
+}
+
+.show{
+ transition: .5s;
+    display: block;
+}
