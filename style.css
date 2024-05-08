@@ -126,3 +126,116 @@ button:hover,button:focus{
  transition: .5s;
     display: block;
 }
+
+
+@media only screen and (max-width: 770px) {
+
+    .box{
+        width: 90%;
+        background-color: rgb(212, 212, 212);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* height: 150%; */
+    }
+    
+    h2{
+        width: 100%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-align: center;
+        padding:10px; 
+        font-size: 1.4em;
+        padding-bottom: 10px;
+    }
+    
+    .pad{
+        padding:  10px 0px;
+    }
+    .square{
+        width: 100%;
+        /* background-color: #86ADAB; */
+        margin: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        /* perspective: 500px; */
+    }
+    button{
+        padding: 10px 50px;
+        font-weight: bold;
+        border-radius: 10px;
+        margin: 10px;
+        background-color: yellow;
+        border: 1px solid yellow;
+    }
+    button:hover,button:focus{
+        background-color: rgb(224, 224, 12);
+    }
+    
+    .item{
+        position: relative;
+        width: 90px;
+        height: 90px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.25em;
+        transform: rotateY(180deg);
+    }
+    .item.jester{
+        transform: rotateY(0deg);
+    }
+    .item::after{
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: #10aaa2;
+        transition: 0.5s;
+        /* opacity: .5; */
+        transform: rotateY(0deg);
+        backface-visibility: hidden;
+    }
+    
+    .jester::after{
+        transform: rotateY(180deg);
+    }
+    
+    .match::after{
+        transform: rotateY(180deg);
+    
+    }
+    .modalshow{
+        display: none;
+        transition: .5s;
+        
+    }
+    .modal{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        width: 80%;
+        height: 40%;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: .5s;
+    }
+    .modal>h1{
+        font-size: 2.5em;
+        font-family: sans-serif;
+        color: green;
+    }
+    
+    .show{
+     transition: .5s;
+        display: block;
+    }
+    
+    
+}
